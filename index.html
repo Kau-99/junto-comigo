@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Junto Comigo • Acompanhantes Sociais Premium</title>
+  <meta name="description" content="Junto Comigo — Plataforma premium para acompanhantes sociais. Segurança, discrição e excelência em experiências memoráveis.">
+  <meta name="theme-color" content="#12324A">
+  <!-- SEO / Social -->
+  <meta property="og:title" content="Junto Comigo • Acompanhantes Sociais Premium">
+  <meta property="og:description" content="Segurança, ética e inovação para experiências inesquecíveis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.juntocomigo.com">
+  <meta property="og:image" content="https://www.juntocomigo.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@juntocomigo">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤝</text></svg>">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Junto Comigo",
+    "url": "https://www.juntocomigo.com",
+    "logo": "https://www.juntocomigo.com/logo.svg",
+    "sameAs": [
+      "https://www.instagram.com/juntocomigo",
+      "https://www.facebook.com/juntocomigo"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <noscript>Para melhor experiência, ative o JavaScript.</noscript>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <!-- Loading screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <header class="header" role="banner">
+    <div class="container header__grid">
+      <a class="logo" href="#" aria-label="Página inicial — Junto Comigo">
+        <svg class="logo__svg" viewBox="0 0 160 40" aria-hidden="true" focusable="false">
+          <rect x="0" y="0" width="160" height="40" rx="8" class="logo__bg"></rect>
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="logo__text">Junto Comigo</text>
+        </svg>
+      </a>
+
+      <nav id="nav" class="nav" aria-label="Menu principal">
+        <ul class="nav__list" role="menubar">
+          <li role="none"><a role="menuitem" href="#hero" class="nav__link">Início</a></li>
+          <li role="none"><a role="menuitem" href="#sobre" class="nav__link">Sobre</a></li>
+          <li role="none"><a role="menuitem" href="#planos" class="nav__link">Planos</a></li>
+          <li role="none"><a role="menuitem" href="#depoimentos" class="nav__link">Depoimentos</a></li>
+          <li role="none"><a role="menuitem" href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button id="cartToggle" class="btn-icon cart-toggle" aria-label="Carrinho de compras" aria-expanded="false">
+          <span class="cart-count">0</span>
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M7 22q-.825 0-1.413-.588T5 20q0-.825.588-1.413T7 18q.825 0 1.413.588T9 20q0 .825-.588 1.413T7 22zm10 0q-.825 0-1.413-.588T15 20q0-.825.588-1.413T17 18q.825 0 1.413.588T19 20q0 .825-.588 1.413T17 22zM6.15 6l2.4 5h7l2.75-5H6.15zM5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.738.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.7-.988t-.05-1.962L6.6 11.6L3 4H1V2h3.25l.95 2z"/>
+          </svg>
+        </button>
+        <button id="themeToggle" class="btn-icon" aria-label="Alternar tema" aria-pressed="false">
+          <span class="sr-only">Alternar tema</span>
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 3a9 9 0 0 0 0 18 9 9 0 0 1 0-18z"/></svg>
+        </button>
+        <button id="navToggle" class="btn-icon nav-toggle" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Abrir menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mini carrinho -->
+  <div class="mini-cart" id="miniCart">
+    <div class="mini-cart__header">
+      <h3>Seu Carrinho</h3>
+      <button class="mini-cart__close" id="closeCart">&times;</button>
+    </div>
+    <div class="mini-cart__content">
+      <p class="mini-cart__empty">Seu carrinho está vazio</p>
+    </div>
+    <div class="mini-cart__footer">
+      <a href="#contato" class="btn btn--primary mini-cart__checkout">Finalizar Compra</a>
+    </div>
+  </div>
+
+  <main id="conteudo-principal">
+    <!-- Hero -->
+    <section id="hero" class="hero section">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1 class="hero__title">Encontre o acompanhante ideal com confiança e estilo</h1>
+          <p class="hero__subtitle">Segurança, ética e inovação em um só lugar. Viva experiências inesquecíveis com profissionais selecionados.</p>
+          <div class="hero__cta">
+            <a href="#contato" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Cadastre-se Agora</a>
+            <a href="#planos" class="btn btn--outline" data-aos="fade-up" data-aos-delay="200">Ver Planos</a>
+          </div>
+          <div class="hero__stats" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat">
+              <span class="stat__number">500+</span>
+              <span class="stat__label">Clientes Satisfeitos</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">50+</span>
+              <span class="stat__label">Profissionais</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">98%</span>
+              <span class="stat__label">Avaliação Positiva</span>
+            </div>
+          </div>
+        </div>
+        <figure class="hero__media" data-aos="zoom-in" data-aos-delay="400">
+          <picture>
+            <source srcset="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%2312324A'/%3E%3Cpath d='M400,250 C450,200 550,200 600,250 C600,350 500,450 400,450 C300,450 200,350 200,250 C250,200 350,200 400,250 Z' fill='%23F28C28'/%3E%3C/svg%3E" type="image/svg+xml">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%2312324A'/%3E%3Cpath d='M400,250 C450,200 550,200 600,250 C600,350 500,450 400,450 C300,450 200,350 200,250 C250,200 350,200 400,250 Z' fill='%23F28C28'/%3E%3C/svg%3E" alt="Acompanhamento social com elegância" width="800" height="600" decoding="async" fetchpriority="high">
+          </picture>
+        </figure>
+      </div>
+      <div class="hero__wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="var(--jc-surface)"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="var(--jc-surface)"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="var(--jc-surface)"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section section--alt">
+      <div class="container narrow">
+        <header class="section__header" data-aos="fade-up">
+          <h2>Sobre Nós</h2>
+          <p class="section__lead">A Junto Comigo conecta você a acompanhantes sociais selecionados com rigor, oferecendo elegância, privacidade e conforto em cada experiência.</p>
+        </header>
+        <div class="features">
+          <article class="feature" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" width="48" height="48">
+                <path fill="var(--jc-orange)" d="M12,1L3,5v6c0,5.55,3.84,10.74,9,12c5.16-1.26,9-6.45,9-12V5L12,1z M19,11c0,1.85-.51,3.65-1.5,5.22c-0.71,1.12-1.67,2.07-2.79,2.79C13.65,19.49,11.85,20,10,20s-3.65-0.51-5.22-1.5c-1.12-0.71-2.07-1.67-2.79-2.79C0.51,14.65,0,12.85,0,11V6.3l10-4l10,4V11z"/>
+                <polygon fill="var(--jc-orange)" points="12,11 8,7 6,9 12,15 18,9 16,7"/>
+              </svg>
+            </div>
+            <h3>Segurança em primeiro lugar</h3>
+            <p>Processos de verificação rigorosos e políticas claras garantem uma experiência protegida e discreta para todos.</p>
+          </article>
+          <article class="feature" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" width="48" height="48">
+                <path fill="var(--jc-orange)" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z M12.5,7.5h-2v6l5.2,3.2l0.8-1.3l-4-2.4V7.5z"/>
+              </svg>
+            </div>
+            <h3>Atendimento humanizado</h3>
+            <p>Suporte respeitoso, empático e eficiente em todas as etapas do atendimento, 24 horas por dia.</p>
+          </article>
+          <article class="feature" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" width="48" height="48">
+                <path fill="var(--jc-orange)" d="M12,2L4,5v6c0,5.55,3.84,10.74,9,12c5.16-1.26,9-6.45,9-12V5L12,2z M14,17h-4v-2h4V17z M14,13h-4V7h4V13z"/>
+              </svg>
+            </div>
+            <h3>Excelência e ética</h3>
+            <p>Compromisso com padrões elevados de qualidade e conduta profissional em todos os serviços.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="section">
+      <div class="container">
+        <header class="section__header" data-aos="fade-up">
+          <h2>Nossos Planos</h2>
+          <p class="section__lead">Escolha o plano ideal para sua ocasião, com total privacidade e conforto.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="100">
+            <div class="card__badge">Popular</div>
+            <header class="card__header">
+              <h3 class="card__title">Básico</h3>
+              <p class="card__price"><strong>R$ 199</strong> <span>/ 1 hora</span></p>
+            </header>
+            <ul class="card__list">
+              <li>Suporte via chat</li>
+              <li>Seleção essencial</li>
+              <li>Privacidade garantida</li>
+              <li>Fotos verificadas</li>
+              <li>Avaliações reais</li>
+            </ul>
+            <button class="btn btn--primary card__action" data-plan="Básico" data-price="199">Selecionar Plano</button>
+          </article>
+
+          <article class="card card--highlight" tabindex="0" aria-label="Plano recomendado" data-aos="fade-up" data-aos-delay="200">
+            <div class="card__badge">Mais Procurado</div>
+            <header class="card__header">
+              <h3 class="card__title">Premium</h3>
+              <p class="card__price"><strong>R$ 499</strong> <span>/ 3 horas</span></p>
+            </header>
+            <ul class="card__list">
+              <li>Atendimento prioritário</li>
+              <li>Seleção premium</li>
+              <li>Suporte dedicado</li>
+              <li>Fotos e vídeos exclusivos</li>
+              <li>Presente de boas-vindas</li>
+            </ul>
+            <button class="btn btn--primary card__action" data-plan="Premium" data-price="499">Selecionar Plano</button>
+          </article>
+
+          <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="300">
+            <div class="card__badge">Exclusivo</div>
+            <header class="card__header">
+              <h3 class="card__title">Luxo</h3>
+              <p class="card__price"><strong>R$ 1499</strong> <span>/ dia inteiro</span></p>
+            </header>
+            <ul class="card__list">
+              <li>Experiência exclusiva</li>
+              <li>Seleção top-tier</li>
+              <li>Suporte VIP 24h</li>
+              <li>Encontro personalizado</li>
+              <li>Transporte incluído</li>
+            </ul>
+            <button class="btn btn--primary card__action" data-plan="Luxo" data-price="1499">Selecionar Plano</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section section--alt">
+      <div class="container narrow">
+        <header class="section__header" data-aos="fade-up">
+          <h2>O Que Nossos Clientes Dizem</h2>
+          <p class="section__lead">Experiências reais de pessoas que viveram momentos inesquecíveis conosco.</p>
+        </header>
+
+        <div class="testimonials">
+          <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial__content">
+              <div class="stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+              <p>"Profissionalismo impressionante. Tudo foi perfeito desde o agendamento até o encontro. Recomendo!"</p>
+            </div>
+            <div class="testimonial__author">
+              <h4>Carlos Silva</h4>
+              <span>Executivo, São Paulo</span>
+            </div>
+          </div>
+
+          <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial__content">
+              <div class="stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+              <p>"A atenção aos detalhes e a discrição fazem toda a diferença. Uma experiência verdadeiramente premium."</p>
+            </div>
+            <div class="testimonial__author">
+              <h4>Marina Oliveira</h4>
+              <span>Empresária, Rio de Janeiro</span>
+            </div>
+          </div>
+
+          <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial__content">
+              <div class="stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+              <p>"Superou todas as minhas expectativas. Profissionais incríveis e um serviço impecável. Voltarei em breve!"</p>
+            </div>
+            <div class="testimonial__author">
+              <h4>Ricardo Almeida</h4>
+              <span>Advogado, Brasília</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+      <div class="container narrow">
+        <header class="section__header" data-aos="fade-up">
+          <h2>Fale Conosco</h2>
+          <p class="section__lead">Responderemos em até 1 dia útil. Sua privacidade é garantida.</p>
+        </header>
+
+        <form id="contactForm" class="form" novalidate>
+          <div class="form__row">
+            <label for="name">Nome Completo</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Seu nome completo" required>
+            <small class="form__hint" id="nameHint">Digite seu nome completo.</small>
+          </div>
+          <div class="form__row">
+            <label for="email">E‑mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="seu@email.com" required>
+            <small class="form__hint" id="emailHint">Usaremos apenas para contato.</small>
+          </div>
+          <div class="form__row">
+            <label for="phone">Telefone (WhatsApp)</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999">
+            <small class="form__hint" id="phoneHint">Opcional, para contato mais rápido.</small>
+          </div>
+          <div class="form__row">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary">Enviar Mensagem</button>
+            <p class="form__legal">Ao enviar, você concorda com nossa <a href="#modal-terms" class="modal-trigger" data-modal="terms">Política de Privacidade</a>.</p>
+          </div>
+          <div class="sr-only" aria-live="polite" id="formStatus"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__grid">
+      <div>
+        <a class="logo footer__logo" href="#" aria-label="Página inicial — Junto Comigo">
+          <svg class="logo__svg" viewBox="0 0 160 40" aria-hidden="true" focusable="false">
+            <rect x="0" y="0" width="160" height="40" rx="8" class="logo__bg"></rect>
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="logo__text">Junto Comigo</text>
+          </svg>
+        </a>
+        <p class="footer__desc">Conectando você a experiências com segurança, ética e estilo desde 2020.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path fill="currentColor" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <nav aria-label="Links úteis">
+        <h4 class="footer__title">Links Rápidos</h4>
+        <ul class="footer__list">
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4 class="footer__title">Contato</h4>
+        <ul class="footer__list">
+          <li>📧 contato@juntocomigo.com</li>
+          <li>📞 +55 (11) 1234-5678</li>
+          <li>📍 São Paulo, Brasil</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__title">Segurança</h4>
+        <ul class="footer__list">
+          <li><a href="#modal-terms" class="modal-trigger" data-modal="terms">Termos de Uso</a></li>
+          <li><a href="#modal-privacy" class="modal-trigger" data-modal="privacy">Política de Privacidade</a></li>
+          <li><a href="#modal-security" class="modal-trigger" data-modal="security">Política de Segurança</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Junto Comigo. Todos os direitos reservados. CNPJ: 12.345.678/0001-99</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content" role="document">
+      <button class="modal__close" id="modalClose" aria-label="Fechar modal">&times;</button>
+      <h2 id="modalTitle">Termos e Condições</h2>
+      <div class="modal__body" id="modalBody">
+        <!-- Conteúdo será carregado via JS -->
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo" hidden>
+    <svg viewBox="0 0 24 24" width="24" height="24">
+      <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </svg>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
